@@ -1,0 +1,65 @@
+
+.Cards {
+    /* overscroll-behavior-y: contain; */
+    padding: 0;
+    /* width: 40vw; */
+    /* height: 40vw; */
+    /* user-select: none; */
+    /* overflow: hidden; */
+    background: rgb(152, 171, 177);
+    margin-bottom: 20vw;
+}
+
+.my-card {
+    background: rgb(136, 122, 122);
+    margin-top:1vw;
+    margin-bottom: 1vw;
+    /* position: fixed; */
+    overflow: hidden;
+    /* width: 100vw; */
+    /* height: 10vw; */
+}
+
+.my-card > div {
+    margin-top:8vw;
+    position: absolute;
+    width: 100vw;
+    height: 35vh;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter:brightness(93%);
+}
+
+.my-card > div > div {
+    background-color: rgba(243, 245, 247, 0.968);
+    background-size:24vw 27vw;
+    background-repeat: no-repeat;
+    background-position:center;
+    padding-top:12vw;
+    width: 27vw;
+    height: 33vw;
+    /* max-height: 570px; */
+    will-change: transform;
+    border-radius: 10px;
+    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4),
+        0 10px 10px -10px rgba(50, 50, 73, 0.3);
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+    .Cards{
+        /* margin-top: -24vw; */
+        /* padding:0; */
+    }
+
+    .my-card > div > div{
+        background-size:37vw 40vw;
+
+        width: 42vw;
+        height: 53vw;
+    }
+}
