@@ -1,0 +1,97 @@
+.cards {
+    padding: 5%;
+    background: #fff;
+
+    .cards__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1.6%;
+        background: #fff;
+        justify-items: start;
+        padding-bottom: 22%;
+    }
+
+    // for each card ------------------***
+
+    .card__item {
+        // margin:2%;
+        padding: 2%;
+        background: #fff;
+        border-radius: 15px;
+        list-style: none;
+        box-shadow: 16px 13px 9px rgba(41, 40, 40, 0.491);
+        transition: all 0.3s linear;
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .cards__item__img {
+            width: 100%;
+            height: 22vw;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .cards__item__info {
+            padding: 3% 4% 4%;
+            height: auto;
+            text-align: center;
+            h5 {
+                font-size: clamp(15px, 2vw, 25px);
+                padding: 2%;
+            }
+            .cards__item__text {
+                color: #252e48;
+                font-size: clamp(10px, 2vw, 15px);
+                line-height: 20px;
+            }
+        }
+    }
+} // -------------------------------------- *****
+
+@media only screen and (max-width: 1100px) {
+    .cards {
+        padding-bottom: 7%;
+
+        .cards__items {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding-bottom: 5%;
+            grid-gap: 1.1%;
+            background-color: #fff;
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    .cards {
+        padding-bottom: 10%;
+
+        .cards__items {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+            padding-bottom: 4%;
+            grid-gap: 1%;
+            background-color: #fff;
+
+            .card__item {
+                padding: 0;
+                margin: 0;
+                max-width: 250px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 560px) {
+    .cards {
+        padding-bottom:27%;
+
+        .cards__items {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+            grid-gap: 0.6%;
+            padding-bottom: 25%;
+            padding-top: 5%;
+            background-color: rgb(246, 245, 245);
+        }
+    }
+}

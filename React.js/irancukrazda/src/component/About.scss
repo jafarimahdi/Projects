@@ -1,0 +1,135 @@
+.detail {
+    width: 93%;
+    margin: auto;
+    // margin-top: 51%;
+
+    .line-image {
+        width: 6vw;
+        margin: 5%;
+        margin-top: 4vh;
+        height: auto;
+        filter: drop-shadow(15px 16px 4px rgb(67, 40, 40));
+    }
+    .frei {
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+        margin: 2%;
+
+        img {
+            width: 45vw;
+            height: auto;
+            border-radius: 1.9rem 7rem 0 7rem;
+            filter: brightness(80%);
+            box-shadow: 13px 14px 36px rgb(50, 47, 47);
+            transition: all 0.1s ease-in;
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+        section {
+            justify-content: center;
+            margin: auto;
+            padding: 4%;
+            h1 {
+                font-size: calc(15px + 1.4vw);
+                text-decoration: underline;
+                filter: drop-shadow(9px 9px 9px black);
+            }
+
+            p {
+                align-self: center;
+                font-size: calc(13px + 1vw);
+                margin-top: 5%;
+            }
+        }
+    }
+
+    .frei-story {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-top: 7%;
+        width: 100%;
+
+        img {
+            width: 62vw;
+            height: 40vw;
+            border-radius: 9rem 1.5rem 9rem 0;
+            filter: brightness(80%);
+            box-shadow: 13px 14px 36px rgb(50, 47, 47);
+            object-fit: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        section {
+            justify-content: center;
+            margin: auto;
+            padding: 2%;
+            h1 {
+                font-size: calc(15px + 1.4vw);
+                text-decoration: underline;
+                padding: 4%;
+                filter: drop-shadow(9px 9px 9px black);
+            }
+            p {
+                align-self: center;
+                font-size: calc(13px + 1vw);
+                padding-top: 4%;
+            }
+            .links {
+                font-size: 2.5rem;
+                padding: 5%;
+                color: rgba(72, 66, 66, 0.683);
+                // justify-content:center;
+                text-align: center;
+                i {
+                    padding: 3%;
+                    &:hover {
+                        transform: scale(0.9);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .line-image {
+            width: 5rem;
+            height: auto;
+        }
+
+        .frei,
+        .frei-story {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+
+            img {
+                width: 90vw;
+                height: auto;
+                align-self: auto;
+                border-radius: 0.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                margin: 0;
+                padding: 0;
+                // margin: 7%;
+            }
+            h1 {
+                margin: 0;
+            }
+            .links {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
