@@ -1,5 +1,17 @@
 # Projects
 
+### PYTHON
+
+| File | Level                      | Topic                                                                                                 |
+|-----:|:---------------------------|:------------------------------------------------------------------------------------------------------|
+|   1. | Basic                      | [ Coffee_Machine ](https://github.com/jafarimahdi/Projects/tree/main/Python/coffee_machine)           |
+|   2. | Basic                      | [ Quiz Game ](https://github.com/jafarimahdi/Projects/tree/main/Python/quiz-game)                     |
+|   3. | Intermediate                           | [ Pong Game ](https://github.com/jafarimahdi/Projects/tree/main/Python/pong-game)                     |
+|   4. | Intermediate               | [ Snake Game ](https://github.com/jafarimahdi/Projects/tree/main/Python/snake_game)                   |
+|   5. | Intermediate               | [ Turtle Cross Street ](https://github.com/jafarimahdi/Projects/tree/main/Python/turtle_cross_street) |
+|   6. | Intermediate               | [ Turtle Race ](https://github.com/jafarimahdi/Projects/tree/main/Python/turtle_race)                     |
+
+
 ### R
 
 | File | Topic                                                                                  |
