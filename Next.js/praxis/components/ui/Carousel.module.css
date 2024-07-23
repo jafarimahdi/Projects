@@ -1,0 +1,38 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselContent {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carouselPrevious,
+.carouselNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5%;
+  text-decoration: underline;
+}
+
+.carouselPrevious {
+  left: 10px;
+}
+
+.carouselNext {
+  right: 10px;
+}
