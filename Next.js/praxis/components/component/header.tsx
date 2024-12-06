@@ -13,7 +13,7 @@ import { NavigationMenuLink, NavigationMenuList, NavigationMenu } from "@/compon
 import React from 'react';
 
 export function Header() {
-  return (
+  return (  
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
       <div className="flex items-center justify-between w-full">
         <div className="w-[150px] hidden lg:flex">
@@ -45,7 +45,7 @@ export function Header() {
                 <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/services">
                   Services
                 </Link>
-                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+                <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contact">
                   Contact
                 </Link>
                 <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
@@ -85,7 +85,7 @@ export function Header() {
               <NavigationMenuLink asChild>
                 <Link
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                  href="#"
+                  href="/contact"
                 >
                   Contact
                 </Link>

@@ -1,9 +1,15 @@
 'use client'
+import { useState, useRef, useEffect } from 'react';
 import Link from "next/link"
 import React from 'react';
+import Autoplay from "embla-carousel-autoplay"
 
+
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
 
 <div className="flex flex-col min-h-[100dvh]">
@@ -110,7 +116,68 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
+
+
+    {/* ---- Pictures of office added to the end ---- */}
+
+     <Carousel 
+        className="w-full max-w-6xl mx-auto"
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+        onSlideChange={(index) => setCurrentIndex(index)}
+     >
+       <CarouselContent >
+         {images.map((img, index) => (
+           <CarouselItem key={index}>
+             <img
+               src={img.src}
+               alt={img.alt}
+               width={img.width}
+               height={img.height}
+               className="object-cover w-full h-auto rounded-lg"
+               style={{ aspectRatio: "800/480", objectFit: "cover" }}
+             />
+           </CarouselItem>
+         ))}
+       </CarouselContent>
+
+       <CarouselPrevious onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
+       <CarouselNext onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
+
+       </Carousel>
+
+       <div className="flex flex-wrap justify-center gap-2 mt-4">
+         {images.map((img, index) => (
+           <img
+             key={index}
+             src={img.src}
+             alt={img.alt}
+             width={img.thumbWidth}
+             height={img.thumbHeight}
+             className="object-cover rounded-lg cursor-pointer"
+            style={{ width: "90px", height: "60px", objectFit: "cover" }}
+            onClick={() => setCurrentIndex(index)}
+           />
+         ))}
+       </div>
+    
+
+    </main>
+
+
+
+      {/*  Footer in the website  */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Acme Inc. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
@@ -123,8 +190,12 @@ export default function Home() {
         </nav>
       </footer>
     </div>
+
   )
 }
+
+
+// --- Start of function and variable in the file ----
 
 function ClipboardIcon(props:any) {
   return (
@@ -258,3 +329,14 @@ function SyringeIcon(props:any) {
     </svg>
   )
 }
+
+// Office pictures as a Array const to show
+
+const images = Array.from({ length: 10 }, (_, i) => ({
+  src: `/place/${i + 1}.jpg`,
+  alt: `Image ${i + 1}`,
+  width: 800,
+  height: 480,
+  thumbWidth: 90,
+  thumbHeight: 60,
+}));

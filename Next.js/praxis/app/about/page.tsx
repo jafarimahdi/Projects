@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+// import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import React from "react";
 import Image from 'next/image';
 
@@ -131,9 +131,103 @@ export default function About() {
           </div>
         </div>
       </section>
+
+              {/* third section  */}
+
+    <div className="w-full max-w-5xl mx-auto py-12 md:py-20 px-4 md:px-6">
+      <div className="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Focus</h2>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">General medical care including home visits</h3>
+                <p className="text-muted-foreground">
+                  Our practice provides comprehensive general medical care, including home visits for patients who are
+                  unable to visit our clinic.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">Vaccination advice, vaccinations and check-ups</h3>
+                <p className="text-muted-foreground">
+                  We offer expert advice on vaccinations, administer vaccinations, and provide regular check-ups to
+                  ensure your health and well-being.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Diagnosis</h2>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">Extensive laboratory diagnostics</h3>
+                <p className="text-muted-foreground">
+                  Our state-of-the-art laboratory provides a wide range of diagnostic tests to help identify and manage
+                  your health conditions.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">ECG</h3>
+                <p className="text-muted-foreground">
+                  We offer electrocardiogram (ECG) services to assess the electrical activity of your heart and detect
+                  any abnormalities.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">Lung function test (spirometry)</h3>
+                <p className="text-muted-foreground">
+                  Our practice provides lung function tests, also known as spirometry, to evaluate the health and
+                  capacity of your lungs.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">24-hour blood pressure measurement</h3>
+                <p className="text-muted-foreground">
+                  We offer 24-hour blood pressure monitoring to help diagnose and manage hypertension or other
+                  cardiovascular conditions.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckIcon className="flex-shrink-0 w-5 h-5 text-primary" />
+              <div>
+                <h3 className="text-lg font-medium">Long-term ECG</h3>
+                <p className="text-muted-foreground">
+                  Our practice provides long-term ECG monitoring to detect and diagnose heart rhythm disorders or other
+                  cardiovascular issues.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
     </>
   );
 }
+
+
+
+
+// for the secound section 
 
 const TeamMember: React.FC<{
   name: string;
@@ -173,6 +267,43 @@ const TeamMember: React.FC<{
 );
 
 
+// for the third section 
 
+const CheckIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+};
 
-
+const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  );
+};
